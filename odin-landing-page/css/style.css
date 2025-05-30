@@ -3,3 +3,36 @@
     /* for debugging the design */
     border: 1px solid black;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+#info {
+    display: flex;
+    justify-content: center;
+}
+
+#info-sub {
+    display: flex;
+}
+
+#call {
+    display: flex;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
