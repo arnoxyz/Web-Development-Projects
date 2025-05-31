@@ -1,3 +1,10 @@
+:root {
+    --dark-background: #1f2937;
+    --light-background: #3882F6;
+    --grey-background: #E5E7EB;
+}
+
+
 * {
     font-family: Roboto;
     /* for debugging the design */
@@ -11,12 +18,17 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: var(--dark-background);
+    color: white;
 }
 
 main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 15px;
+    background-color: var(--dark-background);
+    color: white;
 }
 
 #info {
@@ -28,11 +40,27 @@ main {
     display: flex;
 }
 
+#quote {
+    background-color: var(--grey-background);
+}
+
 #call {
     display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#call button {}
+
+#call,
+#call button {
+    color: white;
+    background-color: var(--light-background);
 }
 
 footer {
     display: flex;
     justify-content: center;
+    background-color: var(--dark-background);
+    color: white;
 }
