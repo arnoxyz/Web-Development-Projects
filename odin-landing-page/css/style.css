@@ -1,6 +1,6 @@
 :root {
-    --dark-background: #1f2937;
-    --light-background: #3882F6;
+    --dark-blue-background: #1f2937;
+    --light-blue-background: #3882F6;
     --grey-background: #E5E7EB;
 
     --text-color1: #F9FAF8;
@@ -23,7 +23,7 @@ body {
 header {
     display: flex;
     justify-content: space-around;
-    background-color: var(--dark-background);
+    background-color: var(--dark-blue-background);
 }
 
 header div {
@@ -37,12 +37,39 @@ header div a {
     color: var(--text-color2);
 }
 
+/* MAIN */
 main {
     display: flex;
     justify-content: center;
     gap: 15px;
-    background-color: var(--dark-background);
+    background-color: var(--dark-blue-background);
+}
+
+main #main-left {
+    width: 400px;
+}
+
+main #main-left h2 {
+    font-size: 48px;
+    color: var(--text-color1);
+}
+
+main #main-left p {
+    font-size: 18px;
+    color: var(--text-color2);
+}
+
+main #main-left button {
     color: white;
+    background-color: #3882F6;
+    padding: 5px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+main #main-right {
+    padding: 10px 40px;
+    background-color: var(--grey-background);
 }
 
 #info {
@@ -64,17 +91,16 @@ main {
     gap: 15px;
 }
 
-#call button {}
 
 #call,
 #call button {
     color: white;
-    background-color: var(--light-background);
+    background-color: var(--light-blue-background);
 }
 
 footer {
     display: flex;
     justify-content: center;
-    background-color: var(--dark-background);
+    background-color: var(--dark-blue-background);
     color: white;
 }
