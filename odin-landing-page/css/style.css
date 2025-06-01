@@ -2,6 +2,9 @@
     --dark-background: #1f2937;
     --light-background: #3882F6;
     --grey-background: #E5E7EB;
+
+    --text-color1: #F9FAF8;
+    --text-color2: #E5E7EB;
 }
 
 
@@ -16,11 +19,22 @@ body {
     flex-direction: column;
 }
 
+/* HEADER */
 header {
     display: flex;
     justify-content: space-around;
     background-color: var(--dark-background);
-    color: white;
+}
+
+header div {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color1);
+}
+
+header div a {
+    font-size: 18px;
+    color: var(--text-color2);
 }
 
 main {
