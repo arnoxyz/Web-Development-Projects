@@ -73,8 +73,10 @@ main #main-left button {
 main #main-right {
     padding: 10px 40px;
     background-color: var(--grey-background);
+    border-radius: 8px;
 }
 
+/* INFO */
 #info {
     display: flex;
     justify-content: center;
@@ -84,12 +86,29 @@ main #main-right {
     padding: 10px 20px;
 }
 
+/* INFO-SUB */
 #info-sub {
     display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#info-sub div div {
+    border: 6px solid var(--light-blue-background);
+    height: 150px;
+    width: 150px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#info-sub div p {
+    color: #1f2937;
+    width: 150px;
 }
 
 #quote {
     background-color: var(--grey-background);
+    color: #1f2937;
 }
 
 #call {
