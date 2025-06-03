@@ -5,6 +5,7 @@
 
     --text-color1: #F9FAF8;
     --text-color2: #E5E7EB;
+    --text-color-dark: #1f2937;
 }
 
 
@@ -15,8 +16,8 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    width: 900px;
 }
 
 /* HEADER */
@@ -43,6 +44,8 @@ main {
     justify-content: center;
     gap: 15px;
     background-color: var(--dark-blue-background);
+    height: 300px;
+    padding: 50px;
 }
 
 main #main-left {
@@ -75,6 +78,10 @@ main #main-right {
 #info {
     display: flex;
     justify-content: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--text-color-dark);
+    padding: 10px 20px;
 }
 
 #info-sub {
