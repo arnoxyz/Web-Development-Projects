@@ -106,10 +106,27 @@ main #main-right {
     width: 150px;
 }
 
+/* QUOTE */
 #quote {
     background-color: var(--grey-background);
-    color: #1f2937;
+    padding: 100px 150px;
 }
+
+#quote-text {
+    color: #1f2937;
+    font-size: 25px;
+    font-weight: 300;
+    font-style: italic;
+    padding-bottom: 5px;
+}
+
+#quote-author {
+    color: black;
+    text-align: right;
+    font-weight: bolder;
+}
+
+
 
 #call {
     display: flex;
