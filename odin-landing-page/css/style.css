@@ -126,19 +126,44 @@ main #main-right {
     font-weight: bolder;
 }
 
-
+/* CALL */
+#call-wrapper {
+    background-color: white;
+    padding: 75px 100px;
+}
 
 #call {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    border-radius: 8px;
 }
-
 
 #call,
 #call button {
     color: white;
     background-color: var(--light-blue-background);
+}
+
+#call div h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+#call div p {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#call div button {
+    color: white;
+    background-color: #3882F6;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: solid white 3px;
 }
 
 footer {
