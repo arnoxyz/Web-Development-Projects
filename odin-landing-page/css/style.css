@@ -12,19 +12,27 @@
 * {
     font-family: Roboto;
     /* for debugging the design */
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
 }
 
 body {
-    margin: 0 auto;
-    width: 900px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* HEADER */
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: baseline;
+    gap: 300px;
     background-color: var(--dark-blue-background);
     padding: 10px 0px;
 }
@@ -46,6 +54,10 @@ header {
 #main-wrapper {
     background-color: var(--dark-blue-background);
     padding: 75px 0px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
@@ -99,7 +111,8 @@ main #main-right {
 /* INFO-SUB */
 #info-sub {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
     padding-top: 25px;
     padding-bottom: 50px;
 }
@@ -128,9 +141,16 @@ main #main-right {
 }
 
 /* QUOTE */
-#quote {
+#quote-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--grey-background);
-    padding: 100px 150px;
+    padding: 100px 0px;
+}
+
+#quote {
+    width: 600px;
 }
 
 #quote-text {
@@ -151,14 +171,20 @@ main #main-right {
 #call-wrapper {
     background-color: white;
     padding: 75px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #call {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 10px;
     height: 125px;
     border-radius: 8px;
+    width: 600px;
+    padding: 10px 100px;
 }
 
 #call,
