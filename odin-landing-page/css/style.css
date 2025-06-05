@@ -99,8 +99,17 @@ main #main-right {
 /* INFO-SUB */
 #info-sub {
     display: flex;
+    justify-content: space-around;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+.info-sub-element {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 5px;
 }
 
 #info-sub div div {
@@ -114,6 +123,8 @@ main #main-right {
 #info-sub div p {
     color: #1f2937;
     width: 150px;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* QUOTE */
@@ -139,14 +150,14 @@ main #main-right {
 /* CALL */
 #call-wrapper {
     background-color: white;
-    padding: 75px 100px;
+    padding: 75px 0px;
 }
 
 #call {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100px;
+    height: 125px;
     border-radius: 8px;
 }
 
