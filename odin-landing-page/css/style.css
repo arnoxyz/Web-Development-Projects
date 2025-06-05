@@ -23,29 +23,35 @@ body {
 /* HEADER */
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--dark-blue-background);
+    padding: 10px 0px;
 }
 
-header div {
+#header-logo {
     font-size: 24px;
     font-weight: bold;
     color: var(--text-color1);
 }
 
-header div a {
-    font-size: 18px;
+#header-links {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
     color: var(--text-color2);
 }
 
 /* MAIN */
+#main-wrapper {
+    background-color: var(--dark-blue-background);
+    padding: 75px 0px;
+}
+
 main {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-between;
     background-color: var(--dark-blue-background);
-    height: 300px;
-    padding: 50px;
 }
 
 main #main-left {
@@ -53,13 +59,17 @@ main #main-left {
 }
 
 main #main-left h2 {
-    font-size: 48px;
+    font-size: 40px;
     color: var(--text-color1);
+    margin: 0px;
+    padding: 0px;
 }
 
 main #main-left p {
-    font-size: 18px;
+    font-size: 14px;
     color: var(--text-color2);
+    margin: 0px;
+    padding: 10px 0px;
 }
 
 main #main-left button {
@@ -71,9 +81,9 @@ main #main-left button {
 }
 
 main #main-right {
-    padding: 10px 40px;
     background-color: var(--grey-background);
     border-radius: 8px;
+    width: 400px;
 }
 
 /* INFO */
@@ -166,9 +176,11 @@ main #main-right {
     border: solid white 3px;
 }
 
+/* FOOTER */
 footer {
     display: flex;
     justify-content: center;
     background-color: var(--dark-blue-background);
     color: white;
+    padding: 20px;
 }
