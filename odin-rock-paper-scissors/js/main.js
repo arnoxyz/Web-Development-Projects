@@ -24,15 +24,15 @@ function getPlayerChoice() {
     while (true) {
         let inputText = prompt("Please insert your choice: (R)ock, (P)aper, (S)cissor").toLowerCase();
         if (inputText.includes("rock") || inputText==="r") {
-            playerChoice = "r";
+            playerChoice = 'r';
             break;
            }
         if (inputText.includes("paper") || inputText==="p") {
-            playerChoice = "p";
+            playerChoice = 'p';
             break;
            }
         if (inputText.includes("scissor") || inputText==="s") {
-            playerChoice = "s";
+            playerChoice = 's';
             break;
            }
         console.log("wrong input, try that again...");
@@ -42,15 +42,40 @@ function getPlayerChoice() {
     }
 
 function gameLogic(computerChoice, playerChoice) {
-    console.log(computerChoice);
-    console.log(playerChoice);
+    console.log("Computer =" + computerChoice);
+    console.log("Player = " + playerChoice);
+    if(computerChoice === playerChoice){
+        console.log("TIE!");
+    } else if((computerChoice === 'r') && (playerChoice === 's')) {
+        console.log("KI Win!")
+    } else if((computerChoice === 's') && (playerChoice === 'p')) {
+        console.log("KI Win!")
+    } else if((computerChoice === 'p') && (playerChoice === 'r')) {
+        console.log("KI Win!")
+    } else { 
+        console.log("Player Win!")
     }
+}
 
-let computerChoice = getComputerChoice();
-console.log(computerChoice);
+function main(){
+    //let computerChoice = getComputerChoice()
+    //let playerChoice = getPlayerChoice()
+    //gameLogic(computerChoice, playerChoice)
 
-let playerChoice = getPlayerChoice();
-console.log(playerChoice);
 
-gameLogic(computerChoice, playerChoice);
+    // Testing all options:
+    gameLogic('r', 'r')
+    gameLogic('r', 'p')
+    gameLogic('r', 's')
 
+    gameLogic('s', 'r')
+    gameLogic('s', 'p')
+    gameLogic('s', 's')
+
+    gameLogic('p', 'r')
+    gameLogic('p', 'p')
+    gameLogic('p', 's')
+}
+
+
+main()
