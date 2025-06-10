@@ -57,13 +57,8 @@ function gameLogic(computerChoice, playerChoice) {
     }
 }
 
-function main(){
-    //let computerChoice = getComputerChoice()
-    //let playerChoice = getPlayerChoice()
-    //gameLogic(computerChoice, playerChoice)
-
-
-    // Testing all options:
+function testing() {
+    // Testing all input options options:
     gameLogic('r', 'r')
     gameLogic('r', 'p')
     gameLogic('r', 's')
@@ -75,6 +70,12 @@ function main(){
     gameLogic('p', 'r')
     gameLogic('p', 'p')
     gameLogic('p', 's')
+}
+
+function main(){
+    let computerChoice = getComputerChoice()
+    let playerChoice = getPlayerChoice()
+    gameLogic(computerChoice, playerChoice)
 }
 
 
