@@ -47,35 +47,35 @@ function gameLogic(computerChoice, playerChoice) {
     if(computerChoice === playerChoice){
         console.log("TIE!");
     } else if((computerChoice === 'r') && (playerChoice === 's')) {
-        console.log("KI Win!")
+        console.log("KI Win!");
     } else if((computerChoice === 's') && (playerChoice === 'p')) {
-        console.log("KI Win!")
+        console.log("KI Win!");
     } else if((computerChoice === 'p') && (playerChoice === 'r')) {
-        console.log("KI Win!")
+        console.log("KI Win!");
     } else { 
-        console.log("Player Win!")
+        console.log("Player Win!");
     }
 }
 
 function testing() {
     // Testing all input options options:
-    gameLogic('r', 'r')
-    gameLogic('r', 'p')
-    gameLogic('r', 's')
+    gameLogic('r', 'r');
+    gameLogic('r', 'p');
+    gameLogic('r', 's');
 
-    gameLogic('s', 'r')
-    gameLogic('s', 'p')
-    gameLogic('s', 's')
+    gameLogic('s', 'r');
+    gameLogic('s', 'p');
+    gameLogic('s', 's');
 
-    gameLogic('p', 'r')
-    gameLogic('p', 'p')
-    gameLogic('p', 's')
+    gameLogic('p', 'r');
+    gameLogic('p', 'p');
+    gameLogic('p', 's');
 }
 
 function main(){
-    let computerChoice = getComputerChoice()
-    let playerChoice = getPlayerChoice()
-    gameLogic(computerChoice, playerChoice)
+    let computerChoice = getComputerChoice();
+    let playerChoice = getPlayerChoice();
+    gameLogic(computerChoice, playerChoice);
 }
 
 
