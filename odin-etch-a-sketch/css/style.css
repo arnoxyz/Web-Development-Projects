@@ -14,4 +14,14 @@ html {
 .game-board-line {
     display: flex;
     align-items: center;
+    background-color: black;
 }
+
+.game-board-element {
+    background-color: black;
+}
+
+.game-board-element:hover {
+    background-color: white;
+}
+

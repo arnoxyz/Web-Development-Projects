@@ -1,11 +1,8 @@
-
-
 function createBoard(lines) {
     for (let i = 0; i < lines; i++){
         const element = document.getElementById("game-board");
         const newDiv = document.createElement("div");
         newDiv.textContent = "";
-        newDiv.style.backgroundColor = "black";
         newDiv.style.padding = "0px";
         newDiv.style.margin = "0px";
         newDiv.className = "game-board-line";
@@ -22,7 +19,6 @@ function createBoardElements(elementsPerLine) {
         for (let i = 0; i < elementsPerLine; i++){
             const newDiv = document.createElement("div");
             newDiv.textContent = "";
-            newDiv.style.backgroundColor = "red";
             newDiv.style.padding = "10px";
             newDiv.style.margin = "0px";
             newDiv.className = "game-board-element";
@@ -38,4 +34,3 @@ function main(){
 }
 
 main();
-
