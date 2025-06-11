@@ -20,8 +20,3 @@ html {
 .game-board-element {
     background-color: black;
 }
-
-.game-board-element:hover {
-    background-color: white;
-}
-

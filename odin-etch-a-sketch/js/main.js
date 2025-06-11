@@ -23,6 +23,11 @@ function createBoardElements(elementsPerLine) {
             newDiv.style.margin = "0px";
             newDiv.className = "game-board-element";
             element.append(newDiv);
+
+            //Set background to defined color
+            newDiv.addEventListener("mouseenter", () => {
+                newDiv.style.background = "white";
+            });
         }
     });
 }
