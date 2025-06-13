@@ -32,16 +32,27 @@ function createBoardElements(elementsPerLine) {
     });
 }
 
-function initBoard() {
+function initBoard(boardSize) {
+
     const btn = document.getElementById("btn-gen-board");
     btn.addEventListener("click", () => {
+        // remove old board
+        removeBoard();
         const input = document.getElementById("input-board-size");
         const boardSize = input.value;
         createBoard(boardSize);
     });
 }
 
+function removeBoard() {
+    const board = document.getElementById("game-board");
+    board.innerHTML = "";
+}
+
 function main(){
+    // creates Board when websites loads for the first time
+    createBoard(16);
+    // add eventListener and removes the old board when btn is clicked
     initBoard();
 }
 
