@@ -32,10 +32,17 @@ function createBoardElements(elementsPerLine) {
     });
 }
 
+function initBoard() {
+    const btn = document.getElementById("btn-gen-board");
+    btn.addEventListener("click", () => {
+        const input = document.getElementById("input-board-size");
+        const boardSize = input.value;
+        createBoard(boardSize);
+    });
+}
 
 function main(){
-    // Init-Board
-    createBoard(16);
+    initBoard();
 }
 
 main();
