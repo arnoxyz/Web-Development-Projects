@@ -2,17 +2,45 @@ html {
     background-color: white;
 }
 
-h1 {
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1,
+h2{
     text-align: center;
 }
 
-#game-config {
+#game-config, 
+#links{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
+    width: 300px;
 }
+
+#game-config div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    padding: 5px;
+}
+
+#game-config div button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+
+
 
 
 #game-board {
