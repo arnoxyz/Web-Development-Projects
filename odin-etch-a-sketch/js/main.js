@@ -1,3 +1,8 @@
+function getRandomColor() {
+    const hex = Math.floor(Math.random() * 0xFFFFFF) .toString(16) .padStart(6, '0');
+    return `#${hex}`;
+}
+
 function createBoard(lines) {
     for (let i = 0; i < lines; i++){
         const element = document.getElementById("game-board");
@@ -27,7 +32,9 @@ function createBoardElements(elementsPerLine) {
 
             //Set background to defined color
             newDiv.addEventListener("mouseenter", () => {
-                newDiv.style.background = document.getElementById("pen-color").value;
+                //newDiv.style.background = document.getElementById("pen-color").value;
+                //Check if random color is ticked
+                newDiv.style.background = getRandomColor();
             });
         }
     });
