@@ -12,9 +12,9 @@
 <body>
     <h1>Etch-A-Sketch<h1>
     <div id="game-config">
-        <!-- <h2>Configs</h2> -->
-        <!-- <input id="board-color">Pick Board Color</input> -->
-        <!-- <input id="pen-color">Pick Board Color</input> -->
+        <h2>Configs</h2>
+        <input id="board-color" value="#000000" type="color">Pick Board Color</input>
+        <input id="pen-color" value="#ffffff" type="color">Pick Pen Color</input>
         <input id="input-board-size" type="number" value="16" min="5" max="40" step="5" oninput="this.value = this.value.replace(/[^0-9]/g, '');">Board-Size</input>
         <button id ="btn-gen-board">Gen Board</button>
     </div>

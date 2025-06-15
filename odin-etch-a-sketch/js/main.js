@@ -22,18 +22,18 @@ function createBoardElements(elementsPerLine) {
             newDiv.style.padding = "10px";
             newDiv.style.margin = "0px";
             newDiv.className = "game-board-element";
+            newDiv.style.background = document.getElementById("board-color").value;
             element.append(newDiv);
 
             //Set background to defined color
             newDiv.addEventListener("mouseenter", () => {
-                newDiv.style.background = "white";
+                newDiv.style.background = document.getElementById("pen-color").value;
             });
         }
     });
 }
 
 function initBoard(boardSize) {
-
     const btn = document.getElementById("btn-gen-board");
     btn.addEventListener("click", () => {
         // remove old board
