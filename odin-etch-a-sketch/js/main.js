@@ -17,6 +17,16 @@ function createBoard(lines) {
    createBoardElements(lines);
 }
 
+function makeOpacityFader() {
+  let step = 1;
+  return function() {
+    const alpha = Math.max(0, (10 - step) / 10);
+    step++;
+    return `rgba(255, 255, 255, ${alpha.toFixed(1)})`;
+  };
+}
+
+
 function createBoardElements(elementsPerLine) {
     const elements = Array.from(document.getElementsByClassName("game-board-line"));
 
@@ -30,11 +40,17 @@ function createBoardElements(elementsPerLine) {
             newDiv.style.background = document.getElementById("board-color").value;
             element.append(newDiv);
 
+            const fadedColor = makeOpacityFader();
             //Set background to defined color
             newDiv.addEventListener("mouseenter", () => {
-                //newDiv.style.background = document.getElementById("pen-color").value;
+
+            newDiv.style.background = fadedColor(); 
+            //Random Color Mode:
                 //Check if random color is ticked
-                newDiv.style.background = getRandomColor();
+                //newDiv.style.background = getRandomColor();
+
+            //Normal Color Mode:
+                //newDiv.style.background = document.getElementById("pen-color").value;
             });
         }
     });
