@@ -1,3 +1,16 @@
+function initModeSelect(){
+    const checkboxes = document.querySelectorAll('input[name="mode"]');
+    checkboxes.forEach(cb => { cb.addEventListener('change', () => {
+        // When one is checked, uncheck all the others
+        if (cb.checked) {
+          checkboxes.forEach(other => {
+            if (other !== cb) other.checked = false;
+          });
+        } 
+      });
+    });
+}
+
 function getRandomColor() {
     const hex = Math.floor(Math.random() * 0xFFFFFF) .toString(16) .padStart(6, '0');
     return `#${hex}`;
@@ -41,16 +54,18 @@ function createBoardElements(elementsPerLine) {
             element.append(newDiv);
 
             const fadedColor = makeOpacityFader();
+
             //Set background to defined color
             newDiv.addEventListener("mouseenter", () => {
-
-            newDiv.style.background = fadedColor(); 
-            //Random Color Mode:
-                //Check if random color is ticked
-                //newDiv.style.background = getRandomColor();
-
-            //Normal Color Mode:
-                //newDiv.style.background = document.getElementById("pen-color").value;
+                const randomColorMode = document.getElementById("random-color");
+                const opacityMode = document.getElementById("opacity");
+                if (randomColorMode.checked === true) {
+                    newDiv.style.background = getRandomColor();
+                } else if (opacityMode.checked === true){
+                    newDiv.style.background = fadedColor(); 
+                } else {
+                    newDiv.style.background = document.getElementById("pen-color").value;
+                }
             });
         }
     });
@@ -73,6 +88,7 @@ function removeBoard() {
 }
 
 function main(){
+    initModeSelect();
     // creates Board when websites loads for the first time
     createBoard(16);
     // add eventListener and removes the old board when btn is clicked
