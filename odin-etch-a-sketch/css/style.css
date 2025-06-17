@@ -33,13 +33,52 @@ h2{
     padding: 5px;
 }
 
+
 #game-config div button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 250px;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
 }
 
+#random-color, 
+#opacity {
+    cursor: pointer;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#mode-select div {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#board-color,
+#pen-color,
+#input-board-size{
+    background-color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+    width: 80px;
+    height: 25px;
+}
 
 
 
