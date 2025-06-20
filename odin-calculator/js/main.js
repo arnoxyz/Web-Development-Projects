@@ -1,5 +1,10 @@
 console.log("Hello World");
 
+function gen_calculator() {
+    const main = document.querySelector("#main");
+    console.log(main);
+}
+
 function operate(a,b,op) {
     switch (op) {
         case '+':
@@ -20,6 +25,10 @@ function operate(a,b,op) {
 }
 
 function main(){
+    //Gen UX
+    gen_calculator();
+
+
     firstNumber = 1
     secondNumber = 2
     operation = "+"
