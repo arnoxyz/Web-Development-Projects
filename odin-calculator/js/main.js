@@ -20,23 +20,24 @@ function genNumberBoard() {
     numberBoard.appendChild(row3);
     numberBoard.appendChild(row4);
 
-    row1.appendChild(genDiv(1));
-    row1.appendChild(genDiv(2));
-    row1.appendChild(genDiv(3));
-    row2.appendChild(genDiv(4));
-    row2.appendChild(genDiv(5));
-    row2.appendChild(genDiv(6));
-    row3.appendChild(genDiv(7));
-    row3.appendChild(genDiv(8));
-    row3.appendChild(genDiv(9));
-    row4.appendChild(genDiv(0));
+    row1.appendChild(genNumberInput(1));
+    row1.appendChild(genNumberInput(2));
+    row1.appendChild(genNumberInput(3));
+    row2.appendChild(genNumberInput(4));
+    row2.appendChild(genNumberInput(5));
+    row2.appendChild(genNumberInput(6));
+    row3.appendChild(genNumberInput(7));
+    row3.appendChild(genNumberInput(8));
+    row3.appendChild(genNumberInput(9));
+    row4.appendChild(genNumberInput(0));
 }
 
-function genDiv(number){
-  const newDiv = document.createElement('button');
-  newDiv.id = number;
-  newDiv.textContent = number;
-  return newDiv;
+function genNumberInput(number){
+  const newElement = document.createElement('button');
+  newElement.id = number;
+  newElement.textContent = number;
+  newElement.addEventListener('click', () => { handleNumberInput(number); });
+  return newElement;
 }
 
 function genRow(number){
@@ -44,6 +45,10 @@ function genRow(number){
   newDiv.id = number;
   newDiv.textcontent = "";
   return newDiv;
+}
+
+function handleNumberInput(number) {
+    console.log(number);
 }
 
 function operate(a,b,op) {
