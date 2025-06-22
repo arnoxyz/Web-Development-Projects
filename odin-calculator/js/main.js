@@ -33,7 +33,7 @@ function genNumberBoard() {
 }
 
 function genDiv(number){
-  const newDiv = document.createElement('div');
+  const newDiv = document.createElement('button');
   newDiv.id = number;
   newDiv.textContent = number;
   return newDiv;
