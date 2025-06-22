@@ -47,9 +47,6 @@ function genRow(number){
   return newDiv;
 }
 
-function handleNumberInput(number) {
-    console.log(number);
-}
 
 function operate(a,b,op) {
     switch (op) {
@@ -70,11 +67,16 @@ function operate(a,b,op) {
   }
 }
 
+function handleNumberInput(number) {
+    firstNumber += number.toString();
+    console.log(firstNumber);
+}
+
 function main(){
     //Gen UX
     genElements();
 
-
+    //Insert First Number:
     firstNumber = 1;
     secondNumber = 2;
     operation = "+";
@@ -88,8 +90,8 @@ function main(){
         //3) Press: Insert Second Number
         //secondnumber =
         //4)Press: =
-        solution = operate(firstNumber, secondNumber, operation);
-        console.log(solution)
+        //solution = operate(firstNumber, secondNumber, operation);
+        //console.log(solution)
 
     //Press: C = deletes and restarts from Insert First Number
     //reset();
