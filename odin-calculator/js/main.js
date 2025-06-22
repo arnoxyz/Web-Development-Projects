@@ -1,7 +1,16 @@
 console.log("Hello World");
 
 function genElements() {
+    genDisplay();
     genNumberBoard();
+}
+
+function genDisplay() {
+    const main = document.querySelector("#main");
+    const display = document.createElement('div');
+    display.id = "display";
+    display.textContent = "OFF";
+    main.appendChild(display);
 }
 
 function genNumberBoard() {
@@ -70,6 +79,8 @@ function operate(a,b,op) {
 function handleNumberInput(number) {
     firstNumber += number.toString();
     console.log(firstNumber);
+    const display = document.querySelector('#display');
+    display.textContent = firstNumber;
 }
 
 function main(){
