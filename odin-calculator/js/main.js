@@ -32,13 +32,23 @@ function genNumberBoard() {
     row1.appendChild(genNumberInput(1));
     row1.appendChild(genNumberInput(2));
     row1.appendChild(genNumberInput(3));
+
     row2.appendChild(genNumberInput(4));
     row2.appendChild(genNumberInput(5));
     row2.appendChild(genNumberInput(6));
+
     row3.appendChild(genNumberInput(7));
     row3.appendChild(genNumberInput(8));
     row3.appendChild(genNumberInput(9));
+
+    row4.appendChild(genSymbolInput("C", "clear"));
     row4.appendChild(genNumberInput(0));
+    row4.appendChild(genSymbolInput("=", "equal"));
+    row4.appendChild(genSymbolInput("/", "divide"));
+
+    row1.appendChild(genSymbolInput("+", "plus"));
+    row2.appendChild(genSymbolInput("-", "minus"));
+    row3.appendChild(genSymbolInput("*", "mult"));
 }
 
 function genNumberInput(number){
@@ -46,6 +56,14 @@ function genNumberInput(number){
   newElement.id = number;
   newElement.textContent = number;
   newElement.addEventListener('click', () => { handleNumberInput(number); });
+  return newElement;
+}
+
+function genSymbolInput(symbol, idName){
+  const newElement = document.createElement('button');
+  newElement.id = idName;
+  newElement.textContent = symbol;
+  newElement.addEventListener('click', () => { handleInput(symbol); });
   return newElement;
 }
 
@@ -83,15 +101,19 @@ function handleNumberInput(number) {
     display.textContent = firstNumber;
 }
 
+function handleInput(symbol) {
+    console.log(symbol);
+}
+
 function main(){
     //Gen UX
     genElements();
 
     //Insert First Number:
-    firstNumber = 1;
-    secondNumber = 2;
-    operation = "+";
-    solution = 0;
+    firstNumber = "";
+    secondNumber = "";
+    operation = "";
+    solution = "";
 
     //Basic Calculator Steps:
         //1) Press: Insert First Number
