@@ -95,39 +95,57 @@ function operate(a,b,op) {
 }
 
 function handleNumberInput(number) {
-    firstNumber += number.toString();
-    console.log(firstNumber);
     const display = document.querySelector('#display');
-    display.textContent = firstNumber;
+
+    if (stage === 0) {
+        // press on C
+        firstNumber += number.toString();
+        display.textContent = firstNumber;
+    }else if(stage === 1){
+        // press on +,-,*,/
+        display.textContent = "";
+    }else if(stage === 2){
+        secondNumber += number.toString();
+        display.textContent = firstNumber;
+    }
 }
 
 function handleInput(symbol) {
     console.log(symbol);
+    const display = document.querySelector('#display');
+
+    if (symbol === 'C') {
+        stage = 0;
+        // press on C
+        firstNumber = "";
+        secondNumber = "";
+        operation = "";
+        solution = "";
+        display.textContent = "0";
+    }
+
+    //Basic Calculator Steps:
+        //stage = 0, 1) Press: Insert First Number
+        //firstNumber =
+        //stage = 1, 2) Press: Operation {+,-,*,/,mod}
+        //operation =
+        //stage = 2, 3) Press: Insert Second Number
+        //secondnumber =
+        //stage = 3, 4)Press: =
+        //solution = operate(firstNumber, secondNumber, operation);
+        //console.log(solution)
 }
 
 function main(){
     //Gen UX
     genElements();
 
-    //Insert First Number:
+    stage = 0;
+
     firstNumber = "";
     secondNumber = "";
     operation = "";
     solution = "";
-
-    //Basic Calculator Steps:
-        //1) Press: Insert First Number
-        //firstNumber =
-        //2) Press: Operation {+,-,*,/,mod}
-        //operation =
-        //3) Press: Insert Second Number
-        //secondnumber =
-        //4)Press: =
-        //solution = operate(firstNumber, secondNumber, operation);
-        //console.log(solution)
-
-    //Press: C = deletes and restarts from Insert First Number
-    //reset();
 }
 
 
