@@ -102,16 +102,13 @@ function handleNumberInput(number) {
         firstNumber += number.toString();
         display.textContent = firstNumber;
     }else if(stage === 1){
-        // press on +,-,*,/
-        display.textContent = "";
-    }else if(stage === 2){
         secondNumber += number.toString();
-        display.textContent = firstNumber;
+        display.textContent = secondNumber;
     }
 }
 
 function handleInput(symbol) {
-    console.log(symbol);
+    const ops = ["+", "-", "*", "/"];
     const display = document.querySelector('#display');
 
     if (symbol === 'C') {
@@ -122,30 +119,26 @@ function handleInput(symbol) {
         operation = "";
         solution = "";
         display.textContent = "0";
-    }
-
-    //Basic Calculator Steps:
-        //stage = 0, 1) Press: Insert First Number
-        //firstNumber =
-        //stage = 1, 2) Press: Operation {+,-,*,/,mod}
-        //operation =
-        //stage = 2, 3) Press: Insert Second Number
-        //secondnumber =
-        //stage = 3, 4)Press: =
+    }else if(ops.includes(symbol) && stage === 0){
+        console.log("operation pressed");
+        display.textContent = symbol;
+        stage = 1;
+    }else if(symbol === '=' && stage === 1){
+        console.log("operate now!");
+        stage = 0;
         //solution = operate(firstNumber, secondNumber, operation);
-        //console.log(solution)
+        //display.textContent = solution;
+        firstNumber = "";
+        secondNumber = "";
+        operation = "";
+        solution = "";
+    }
 }
 
 function main(){
     //Gen UX
     genElements();
-
     stage = 0;
-
-    firstNumber = "";
-    secondNumber = "";
-    operation = "";
-    solution = "";
 }
 
 
