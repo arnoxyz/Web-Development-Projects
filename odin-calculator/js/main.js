@@ -98,12 +98,11 @@ function handleNumberInput(number) {
     const display = document.querySelector('#display');
 
     if (stage === 0) {
-        // press on C
         firstNumber += number.toString();
         display.textContent = firstNumber;
     }else if(stage === 1){
         secondNumber += number.toString();
-        display.textContent = secondNumber;
+        display.textContent = firstNumber + operation + secondNumber;
     }
 }
 
@@ -111,9 +110,9 @@ function handleInput(symbol) {
     const ops = ["+", "-", "*", "/"];
     const display = document.querySelector('#display');
 
+    // press on C
     if (symbol === 'C') {
         stage = 0;
-        // press on C
         firstNumber = "";
         secondNumber = "";
         operation = "";
@@ -121,13 +120,14 @@ function handleInput(symbol) {
         display.textContent = "0";
     }else if(ops.includes(symbol) && stage === 0){
         console.log("operation pressed");
-        display.textContent = symbol;
+        display.textContent = firstNumber + symbol;
         stage = 1;
+        operation = symbol;
     }else if(symbol === '=' && stage === 1){
         console.log("operate now!");
         stage = 0;
-        //solution = operate(firstNumber, secondNumber, operation);
-        //display.textContent = solution;
+        solution = operate(Number(firstNumber), Number(secondNumber), operation);
+        display.textContent = solution.toString();
         firstNumber = "";
         secondNumber = "";
         operation = "";
@@ -139,6 +139,10 @@ function main(){
     //Gen UX
     genElements();
     stage = 0;
+    firstNumber = "";
+    secondNumber = "";
+    operation = "";
+    solution = "";
 }
 
 
