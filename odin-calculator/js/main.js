@@ -116,11 +116,15 @@ function handleInput(symbol) {
         operation = "";
         solution = "";
         display.textContent = "0";
-    }else if(ops.includes(symbol) && stage === 0){
+    }else if(ops.includes(symbol)){
         if (firstNumber === ""){
             firstNumber = 0;
         }
-        display.textContent = firstNumber + symbol;
+        if (secondNumber === ""){
+            display.textContent = firstNumber + symbol;
+        }else {
+            display.textContent = firstNumber + symbol + secondNumber;
+        }
         stage = 1;
         operation = symbol;
     }else if(symbol === '=' && stage === 1){
