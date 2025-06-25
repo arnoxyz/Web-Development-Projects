@@ -128,7 +128,7 @@ function handleInput(symbol) {
         stage = 0;
         solution = operate(Number(firstNumber), Number(secondNumber), operation);
         display.textContent = solution.toString();
-        firstNumber = "";
+        firstNumber = solution;
         secondNumber = "";
         operation = "";
         solution = "";
@@ -144,7 +144,5 @@ function main(){
     operation = "";
     solution = "";
 }
-
-
 
 main();
