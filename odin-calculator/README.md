@@ -1,2 +1,5 @@
 # Calculator
-This is a implementation of a basic calculator
+This is an implementation of a basic calculator
+
+## Final Design
+![calc](./calc-final.png)
