@@ -117,6 +117,9 @@ function handleInput(symbol) {
         solution = "";
         display.textContent = "0";
     }else if(ops.includes(symbol) && stage === 0){
+        if (firstNumber === ""){
+            firstNumber = 0;
+        }
         display.textContent = firstNumber + symbol;
         stage = 1;
         operation = symbol;
