@@ -1,5 +1,3 @@
-console.log("Hello World");
-
 function genElements() {
     genDisplay();
     genNumberBoard();
@@ -119,12 +117,10 @@ function handleInput(symbol) {
         solution = "";
         display.textContent = "0";
     }else if(ops.includes(symbol) && stage === 0){
-        console.log("operation pressed");
         display.textContent = firstNumber + symbol;
         stage = 1;
         operation = symbol;
     }else if(symbol === '=' && stage === 1){
-        console.log("operate now!");
         stage = 0;
         solution = operate(Number(firstNumber), Number(secondNumber), operation);
         display.textContent = solution.toString();
