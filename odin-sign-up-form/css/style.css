@@ -1,25 +1,32 @@
 body {
+    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+    margin: 0px;
+    padding: 0px;
 }
 
 main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: lightblue;
     width: 850px;
     padding-top: 150px;
     padding-left: 150px;
 }
 
+#info-area,
+#form-area,
+#call-to-action-area {
+    padding-left: 35px;
+}
+
 /* INFO-AREA */
 #info-area {
-    background-color: green;
     width: 550px;
     font-weight: bold;
 }
@@ -39,31 +46,36 @@ main {
 /* FORM-AREA */
 #form-area {
     background-color: white;
+    width: 850px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 #form-area > :nth-child(1) {
     padding-top: 15px;
     padding-bottom: 15px;
-    width: 500px;
     font-size: 24px;
     font-weight: bold;
 }
 
 #sign-up-form {
-    background-color: green;
-    width: 550px;
+    width: 400px;
 }
 
 .sign-up-row {
-  background-color: red;
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .sign-up-element {
-  background-color: green;
-  display: flex;
-  background-color: blue;
-  flex-direction: column;
-  margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    width: 175px;
+    gap: 4px;
+}
+.sign-up-element input{
+    width: 150px;
 }
