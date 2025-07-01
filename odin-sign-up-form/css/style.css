@@ -79,3 +79,35 @@ main {
 .sign-up-element input{
     width: 150px;
 }
+
+/* CTA-AREA */
+#call-to-action-area {
+
+}
+#call-to-action-area div a {
+  color: #1e7e34;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+#call-to-action-area button {
+  background-color: #1e7e34;
+  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 15px;
+}
+
+#call-to-action-area button:hover {
+  background-color: #18642b;
+}
+
+#call-to-action-area button:active {
+  background-color: #124f23;
+}
