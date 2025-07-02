@@ -7,6 +7,7 @@ body {
     font-size: 18px;
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 
 #picture-placeholder {
@@ -19,10 +20,8 @@ body {
 
 main {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     width: 75%;
-    padding-top: 50px;
 }
 
 #info-area,
@@ -35,12 +34,12 @@ main {
 #info-area {
     width: 550px;
     font-weight: bold;
+    padding-bottom: 20px;
 }
 
 #info-area > :nth-child(1) {
     width: 500px;
     font-size: 20px;
-    padding-bottom: 5px;
 }
 
 #info-area > :nth-child(2) {
@@ -48,12 +47,13 @@ main {
 }
 
 #info-area > :nth-child(3) {
-    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 /* FORM-AREA */
 #form-area {
-    width: 700px;
+    width: 550px;
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     padding-bottom: 20px;
@@ -116,7 +116,8 @@ main {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 
 #call-to-action-area button:hover {
