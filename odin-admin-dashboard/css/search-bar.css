@@ -48,6 +48,14 @@
   width: 150px;
 }
 
+.user-avatar-placeholder-small {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #f7c948;
+  color: #333;
+}
+
 #user-name {
   color: black;
   font-weight: bold;
