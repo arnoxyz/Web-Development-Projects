@@ -1,11 +1,21 @@
 /* Dashboard */
-.project-dashboard h3 {}
+#project-dashboard{
+    box-shadow: pobox-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#project-dashboard h3 {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 40px;
+    padding-top: 25px;
+}
 
 #projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 60px;
   padding: 20px;
+  padding-top: 0px;
 }
 .project {
     width: 300px;
