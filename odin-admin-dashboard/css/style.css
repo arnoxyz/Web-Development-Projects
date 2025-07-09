@@ -2,6 +2,7 @@
 @import url("user-info.css");
 @import url("dashboard.css");
 @import url("trending.css");
+@import url("announc.css");
 
 body {
     background-color: white;
