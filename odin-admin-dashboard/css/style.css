@@ -1,6 +1,7 @@
 @import url("search-bar.css");
 @import url("user-info.css");
 @import url("dashboard.css");
+@import url("trending.css");
 
 body {
     background-color: white;
@@ -16,6 +17,7 @@ header {
 }
 
 main {
+    display: flex;
+    gap: 15px;
     background-color: #f5f5f5;
 }
-
