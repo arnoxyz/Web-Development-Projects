@@ -6,5 +6,5 @@ This is an implementation of a basic calculator
 ## Example Calculation
 ![calc example](./examples/calc-example.png)
 ## Result
-As expected the result is 42
+As expected the result is 42 <br>
 ![calc example result](./examples/calc-example-result.png)

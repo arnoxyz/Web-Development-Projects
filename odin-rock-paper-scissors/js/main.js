@@ -1,11 +1,9 @@
-console.log("Welcome to Rock, Paper, Scissors:")
-
-// Function that gives a random number 0,1, or 2 
+// Function that gives a random number 0,1, or 2
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-function getComputerChoice() {	
+function getComputerChoice() {
     let choice = getRandomInt(3);
     if (choice === 0) {
         return 'r';
@@ -42,7 +40,7 @@ function getPlayerChoice() {
     }
 
 function gameLogic(computerChoice, playerChoice) {
-    console.log("Computer =" + computerChoice);
+    console.log("Computer = " + computerChoice);
     console.log("Player = " + playerChoice);
     if(computerChoice === playerChoice){
         console.log("TIE!");
@@ -52,7 +50,7 @@ function gameLogic(computerChoice, playerChoice) {
         console.log("KI Win!");
     } else if((computerChoice === 'p') && (playerChoice === 'r')) {
         console.log("KI Win!");
-    } else { 
+    } else {
         console.log("Player Win!");
     }
 }
@@ -73,9 +71,12 @@ function testing() {
 }
 
 function main(){
-    let computerChoice = getComputerChoice();
-    let playerChoice = getPlayerChoice();
-    gameLogic(computerChoice, playerChoice);
+    console.log("Welcome to Rock, Paper, Scissors:");
+    while(true){
+        let computerChoice = getComputerChoice();
+        let playerChoice = getPlayerChoice();
+        gameLogic(computerChoice, playerChoice);
+   }
 }
 
 
