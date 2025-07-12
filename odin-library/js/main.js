@@ -1,22 +1,23 @@
 class Book {
-  constructor(title, author, year) {
+  constructor(id, title, author, year) {
+    this.id = id;
     this.title = title;
     this.author = author;
     this.year = year;
   }
 
   toString() {
-    return `${this.title} by ${this.author}, published in ${this.year}`;
+    return `(Id=${this.id}), ${this.title} by ${this.author}, published in ${this.year}`;
   }
 }
 
 //Add some books that I like
 const books = [
-  new Book("Atomic Habits", "James Clear", 2018),
-  new Book("Ham on Rye", "Charles Bukowski", 1982),
-  new Book("Im Westen nichts Neues", "Erich Maria Remarque", "1928"),
-  new Book("Gut gegen Nordwind", "Daniel Glattauer", "2006"),
-  new Book("Sechs Österreicher unter den ersten fünf", "Dirk Stermann", "2010")
+  new Book(1, "Atomic Habits", "James Clear", 2018),
+  new Book(2, "Ham on Rye", "Charles Bukowski", 1982),
+  new Book(3, "Im Westen nichts Neues", "Erich Maria Remarque", "1928"),
+  new Book(4, "Gut gegen Nordwind", "Daniel Glattauer", "2006"),
+  new Book(5, "Sechs Österreicher unter den ersten fünf", "Dirk Stermann", "2010")
 ];
 
 
@@ -27,14 +28,24 @@ function printBooks(books){
     });
 }
 
-function addBook(title, author, year){
-    console.log(`Add Book: ${title}, ${author}, ${year}`);
-    books.push(new Book(title, author, year));
+function addBook(id, title, author, year){
+    console.log(`Add Book: ${id}, ${title}, ${author}, ${year}`);
+    books.push(new Book(id, title, author, year));
+}
+
+function removeBook(id){
+    console.log(`Remove Book with Id: ${id}`);
+    const idx = books.findIndex(book => book.id === id);
+    if (idx !== -1) {
+        books.splice(idx, 1);
+    }
 }
 
 
 function main(){
-    addBook("test", "test name", 123);
+    addBook(6, "test", "test name", 123);
+    removeBook(1);
+    removeBook(6);
     printBooks(books);
 }
 
