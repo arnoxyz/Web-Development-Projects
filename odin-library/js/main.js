@@ -19,12 +19,23 @@ const books = [
   new Book("Sechs Österreicher unter den ersten fünf", "Dirk Stermann", "2010")
 ];
 
-function main(){
 
-    console.log("Print all saved books");
+function printBooks(books){
+    console.log("Print all saved books: \n");
     books.forEach(book => {
         console.log(book.toString());
     });
+}
+
+function addBook(title, author, year){
+    console.log(`Add Book: ${title}, ${author}, ${year}`);
+    books.push(new Book(title, author, year));
+}
+
+
+function main(){
+    addBook("test", "test name", 123);
+    printBooks(books);
 }
 
 main();
