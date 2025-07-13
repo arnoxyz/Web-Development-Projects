@@ -1,3 +1,4 @@
+//OOP
 class Book {
   constructor(id, title, author, year) {
     this.id = id;
@@ -42,11 +43,34 @@ function removeBook(id){
 }
 
 
+//Rendering
+function renderBook(book){
+  const main = document.getElementById("main");
+
+  const bookDiv = document.createElement("div");
+  bookDiv.className = "book";
+
+  bookDiv.innerHTML = `
+    <h3>${book.title}</h3>
+    <p><strong>Author:</strong> ${book.author}</p>
+    <p><strong>Year:</strong> ${book.year}</p>
+  `;
+
+  main.appendChild(bookDiv);
+}
+
+function renderBooks() {
+    books.forEach(book => renderBook(book));
+}
+
+
 function main(){
-    addBook(6, "test", "test name", 123);
-    removeBook(1);
-    removeBook(6);
+    //for Testing
+    //addBook(6, "test", "test name", 123);
+    //removeBook(1);
     printBooks(books);
+
+    renderBooks();
 }
 
 main();
