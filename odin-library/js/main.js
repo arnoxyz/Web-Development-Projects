@@ -45,18 +45,18 @@ function removeBook(id){
 
 //Rendering
 function renderBook(book){
-  const main = document.getElementById("main");
+    const bookGrid= document.getElementById("book-grid");
+    const bookDiv = document.createElement("div");
+    bookDiv.className = "book";
 
-  const bookDiv = document.createElement("div");
-  bookDiv.className = "book";
+    bookDiv.innerHTML = `
+    <h3 class="book-title">${book.title}</h3>
+    <div class="book-img">BOOK COVER</div>
+    <p class="book-author"><strong>Author:</strong> ${book.author}</p>
+    <p class="book-year"><strong>Year:</strong> ${book.year}</p>
+    `;
 
-  bookDiv.innerHTML = `
-    <h3>${book.title}</h3>
-    <p><strong>Author:</strong> ${book.author}</p>
-    <p><strong>Year:</strong> ${book.year}</p>
-  `;
-
-  main.appendChild(bookDiv);
+    bookGrid.appendChild(bookDiv);
 }
 
 function renderBooks() {
