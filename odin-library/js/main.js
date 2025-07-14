@@ -51,7 +51,7 @@ function renderBook(book){
 
     bookDiv.innerHTML = `
     <h3 class="book-title">${book.title}</h3>
-    <div class="book-img">BOOK COVER</div>
+    <div class="book-img"></div>
     <p class="book-author"><strong>Author:</strong> ${book.author}</p>
     <p class="book-year"><strong>Year:</strong> ${book.year}</p>
     `;
