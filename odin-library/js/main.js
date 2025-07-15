@@ -71,14 +71,42 @@ function renderBook(book){
     bookGrid.appendChild(bookDiv);
 }
 
+
+function createUIAddNewBook(){
+    const bookGrid= document.getElementById("book-grid");
+    const bookDiv = document.createElement("div");
+    bookDiv.className = "book";
+
+    bookDiv.innerHTML = `
+      <h3 class="book-title">New Book</h3>
+      <label>
+        <strong>Title:</strong>
+        <input type="text" class="book-input-title" placeholder="Enter title">
+      </label><br>
+      <label>
+        <strong>Author:</strong>
+        <input type="text" class="book-input-author" placeholder="Enter author">
+      </label><br>
+      <label>
+        <strong>Year:</strong>
+        <input type="number" class="book-input-year" placeholder="Enter year">
+      </label><br>
+      <button class="book-save-button">Save Book</button>
+    `;
+
+    bookGrid.appendChild(bookDiv);
+}
+
 function renderBooks() {
     books.forEach(book => renderBook(book));
+    addBook();
 }
 
 
 function main(){
     //fetch books from the local json file
     fetchBooks();
+    createUIAddNewBook(){
 }
 
 main();
