@@ -29,6 +29,7 @@ function fetchBooks(){
       .then(data => {
         books = data.map(book => new Book(book.id, book.title, book.author, book.year));
         renderBooks();
+        createUIAddNewBook();
       })
       .catch(err => console.error('Failed to load books.json', err));
 }
@@ -78,35 +79,36 @@ function createUIAddNewBook(){
     bookDiv.className = "book";
 
     bookDiv.innerHTML = `
-      <h3 class="book-title">New Book</h3>
-      <label>
-        <strong>Title:</strong>
-        <input type="text" class="book-input-title" placeholder="Enter title">
-      </label><br>
-      <label>
-        <strong>Author:</strong>
-        <input type="text" class="book-input-author" placeholder="Enter author">
-      </label><br>
-      <label>
-        <strong>Year:</strong>
-        <input type="number" class="book-input-year" placeholder="Enter year">
-      </label><br>
-      <button class="book-save-button">Save Book</button>
+      <div class="book-form-container">
+        <h3 class="book-title">New Book</h3>
+        <label>
+          Title:
+          <input type="text" class="book-input-title" placeholder="Enter title">
+        </label>
+        <label>
+          Author:
+          <input type="text" class="book-input-author" placeholder="Enter author">
+        </label>
+        <label>
+          Year:
+          <input type="number" max="2025" step="1" class="book-input-year" placeholder="Enter year">
+        </label>
+        <button class="book-save-button">Save Book</button>
+      </div>
     `;
+
 
     bookGrid.appendChild(bookDiv);
 }
 
 function renderBooks() {
     books.forEach(book => renderBook(book));
-    addBook();
 }
 
 
 function main(){
     //fetch books from the local json file
     fetchBooks();
-    createUIAddNewBook(){
 }
 
 main();
