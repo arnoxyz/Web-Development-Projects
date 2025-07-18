@@ -1,3 +1,5 @@
+id = 6;
+
 //OOP
 class Book {
   constructor(id, title, author, year) {
@@ -28,8 +30,8 @@ function fetchBooks(){
       .then(response => response.json())
       .then(data => {
         books = data.map(book => new Book(book.id, book.title, book.author, book.year));
-        renderBooks();
         createUIAddNewBook();
+        renderBooks();
       })
       .catch(err => console.error('Failed to load books.json', err));
 }
@@ -79,27 +81,43 @@ function createUIAddNewBook(){
     bookDiv.className = "book";
 
     bookDiv.innerHTML = `
-      <div class="book-form-container">
+      <div id="book-form-container">
         <h3 class="book-title">New Book</h3>
         <label>
           Title:
-          <input type="text" class="book-input-title" placeholder="Enter title">
+          <input type="text" id="book-input-title" placeholder="Enter title">
         </label>
         <label>
           Author:
-          <input type="text" class="book-input-author" placeholder="Enter author">
+          <input type="text" id="book-input-author" placeholder="Enter author">
         </label>
         <label>
           Year:
-          <input type="number" max="2025" step="1" class="book-input-year" placeholder="Enter year">
+          <input type="number" max="2025" step="1" id="book-input-year" placeholder="Enter year">
         </label>
-        <button class="book-save-button">Save Book</button>
+        <button id="book-save-button">Save Book</button>
       </div>
     `;
 
 
     bookGrid.appendChild(bookDiv);
+
+    document.getElementById('book-save-button').addEventListener('click', newBook);
 }
+
+
+function newBook() {
+    let title = document.getElementById('book-input-title').value;
+    let author = document.getElementById('book-input-author').value;
+    let year = document.getElementById('book-input-year').value;
+    id = id+1;
+
+    book = new Book(id, title, author, year);
+    addBook(id, title, author, year);
+    renderBook(book);
+}
+
+
 
 function renderBooks() {
     books.forEach(book => renderBook(book));
