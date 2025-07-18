@@ -1,4 +1,5 @@
-id = 6;
+let id = 6;
+let books = [];
 
 //OOP
 class Book {
@@ -14,17 +15,6 @@ class Book {
   }
 }
 
-//Add some books that I like
-/*
-const books = [
-  new Book(1, "Atomic Habits", "James Clear", 2018),
-  new Book(2, "Ham on Rye", "Charles Bukowski", 1982),
-  new Book(3, "Im Westen nichts Neues", "Erich Maria Remarque", "1928"),
-  new Book(4, "Gut gegen Nordwind", "Daniel Glattauer", "2006"),
-  new Book(5, "Sechs Österreicher unter den ersten fünf", "Dirk Stermann", "2010")
-];
-*/
-let books = [];
 function fetchBooks(){
     fetch('./books.json')
       .then(response => response.json())
@@ -57,6 +47,14 @@ function removeBook(id){
     }
 }
 
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
 
 //Rendering
 function renderBook(book){
@@ -70,6 +68,9 @@ function renderBook(book){
     <p class="book-author"><strong>Author:</strong> ${book.author}</p>
     <p class="book-year"><strong>Year:</strong> ${book.year}</p>
     `;
+
+    const bookImg = bookDiv.querySelector('.book-img');
+    bookImg.style.backgroundColor = getRandomColor();
 
     bookGrid.appendChild(bookDiv);
 }

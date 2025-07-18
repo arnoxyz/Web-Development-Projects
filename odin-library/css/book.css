@@ -52,27 +52,4 @@
 
 
 
-#book-grid .book:nth-child(1) .book-img {
-    background-color: #ffb74d;
-}
-
-#book-grid .book:nth-child(2) .book-img {
-    background-color: #4db6ac;
-}
-
-#book-grid .book:nth-child(3) .book-img {
-    background-color: #7986cb;
-}
-
-#book-grid .book:nth-child(4) .book-img {
-    background-color: #81c784;
-}
-
-#book-grid .book:nth-child(5) .book-img {
-    background-color: #e57373;
-}
-
-#book-grid .book:nth-child(6) .book-img {
-    background-color: #ffb74d;
-}
 
