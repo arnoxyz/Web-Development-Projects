@@ -13,3 +13,5 @@ simple calculator
 sign up page
 ## odin-admin-dashboard
 admin dashboard using grid and flex
+## odin-library
+display a book list and add, delete books
