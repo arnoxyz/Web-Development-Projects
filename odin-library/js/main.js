@@ -63,6 +63,7 @@ function renderBook(book){
     bookDiv.className = "book";
 
     bookDiv.innerHTML = `
+    <button class="book-delete-btn">✖</button>
     <h3 class="book-title">${book.title}</h3>
     <div class="book-img"></div>
     <p class="book-author"><strong>Author:</strong> ${book.author}</p>
@@ -72,7 +73,9 @@ function renderBook(book){
     const bookImg = bookDiv.querySelector('.book-img');
     bookImg.style.backgroundColor = getRandomColor();
 
+    bookDiv.querySelector('.book-delete-btn').addEventListener('click', () => { bookDiv.remove(); });
     bookGrid.appendChild(bookDiv);
+
 }
 
 
