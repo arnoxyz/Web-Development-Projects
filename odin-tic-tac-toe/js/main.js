@@ -1,3 +1,5 @@
+let toggle = false;
+
 const gameBoard = (function () {
     let board = ["", "", "", "", "", "", "", "", ""];
 
@@ -71,44 +73,27 @@ function createElement(number){
     const newElement= document.createElement('button');
     newElement.className = 'board';
     newElement.id = number;
+    newElement.innerText = " ";
 
     newElement.addEventListener("click", (e) => handleClick(e));
     return newElement;
 }
 
 function handleClick(e){
-       console.log("clicked element id: " + e.currentTarget.id);
+    if (e.currentTarget.textContent.trim() === ""){
+        toggle = !toggle;
+        const current = toggle ? "X" : "O";
+
+        e.currentTarget.textContent = current;
+        gameBoard.setCell(e.currentTarget.id, current);
+        gameBoard.renderBoard();
+    }
+
 }
 
 
 function main(){
     createUIBoard();
-
-    //test1
-    gameBoard.setCell(0, "X");
-    gameBoard.setCell(4, "X");
-    gameBoard.setCell(8, "X");
-    gameBoard.renderBoard();
-    console.log(gameBoard.checkWinner("X"));
-    console.log(gameBoard.checkWinner("O"));
-
-    //test2
-    gameBoard.resetBoard();
-    gameBoard.setCell(0, "O");
-    gameBoard.setCell(1, "O");
-    gameBoard.setCell(2, "O");
-    gameBoard.renderBoard();
-    console.log(gameBoard.checkWinner("X"));
-    console.log(gameBoard.checkWinner("O"));
-
-    //test3
-    gameBoard.resetBoard();
-    gameBoard.setCell(0, "O");
-    gameBoard.setCell(1, "X");
-    gameBoard.setCell(2, "O");
-    gameBoard.renderBoard();
-    console.log(gameBoard.checkWinner("X"));
-    console.log(gameBoard.checkWinner("O"));
 }
 
 main();
