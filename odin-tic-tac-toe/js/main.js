@@ -63,15 +63,21 @@ function createUIBoard(){
     // 3, 4, 5
     // 6, 7, 8
     for (let i = 0; i <= 8; i++) {
-        mainDiv.appendChild(createDiv(i));
+        mainDiv.appendChild(createElement(i));
     }
 }
 
-function createDiv(number){
-    const div = document.createElement('div');
-    div.className = 'board';
-    div.id = number;
-    return div;
+function createElement(number){
+    const newElement= document.createElement('button');
+    newElement.className = 'board';
+    newElement.id = number;
+
+    newElement.addEventListener("click", (e) => handleClick(e));
+    return newElement;
+}
+
+function handleClick(e){
+       console.log("clicked element id: " + e.currentTarget.id);
 }
 
 
