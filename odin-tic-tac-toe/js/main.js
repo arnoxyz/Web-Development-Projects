@@ -1,6 +1,21 @@
 const gameBoard = (function () {
     let board = ["", "", "", "", "", "", "", "", ""];
 
+    //Board Cells:
+    // 0, 1, 2
+    // 3, 4, 5
+    // 6, 7, 8
+    const winningCombinations = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+
     function setCell(index, player) {
         if (index >= 0 && index < 9 && board[index] === "") {
             board[index] = player;
@@ -26,21 +41,49 @@ const gameBoard = (function () {
         `);
     }
 
+    function checkWinner(player) {
+        return winningCombinations.some(combination => {
+            return combination.every(index => board[index] === player);
+        });
+    }
+
     return {
         setCell,
         getBoard,
         resetBoard,
-        renderBoard
+        renderBoard,
+        checkWinner
     };
 })();
 
 
 
 function main(){
+    //test1
     gameBoard.setCell(0, "X");
-    gameBoard.setCell(4, "O");
+    gameBoard.setCell(4, "X");
     gameBoard.setCell(8, "X");
     gameBoard.renderBoard();
+    console.log(gameBoard.checkWinner("X"));
+    console.log(gameBoard.checkWinner("O"));
+
+    //test2
+    gameBoard.resetBoard();
+    gameBoard.setCell(0, "O");
+    gameBoard.setCell(1, "O");
+    gameBoard.setCell(2, "O");
+    gameBoard.renderBoard();
+    console.log(gameBoard.checkWinner("X"));
+    console.log(gameBoard.checkWinner("O"));
+
+    //test3
+    gameBoard.resetBoard();
+    gameBoard.setCell(0, "O");
+    gameBoard.setCell(1, "X");
+    gameBoard.setCell(2, "O");
+    gameBoard.renderBoard();
+    console.log(gameBoard.checkWinner("X"));
+    console.log(gameBoard.checkWinner("O"));
 }
 
 main();
