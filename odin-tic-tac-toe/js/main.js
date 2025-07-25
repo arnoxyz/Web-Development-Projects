@@ -43,6 +43,10 @@ const gameBoard = (function () {
         `);
     }
 
+    function isFull() {
+        return board.every(cell => cell !== "");
+    }
+
     function checkWinner(player) {
         return winningCombinations.some(combination => {
             return combination.every(index => board[index] === player);
@@ -54,7 +58,8 @@ const gameBoard = (function () {
         getBoard,
         resetBoard,
         renderBoard,
-        checkWinner
+        checkWinner,
+        isFull
     };
 })();
 
@@ -86,7 +91,17 @@ function handleClick(e){
 
         e.currentTarget.textContent = current;
         gameBoard.setCell(e.currentTarget.id, current);
-        gameBoard.renderBoard();
+        if(gameBoard.checkWinner(current)){
+            alert("player with " + current + " won!!");
+            document.getElementById("main").innerHTML = "";
+            createUIBoard();
+            gameBoard.resetBoard();
+        }else if(gameBoard.isFull()){
+            alert("Tie!");
+            document.getElementById("main").innerHTML = "";
+            createUIBoard();
+            gameBoard.resetBoard();
+        }
     }
 
 }
