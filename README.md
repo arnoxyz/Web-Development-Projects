@@ -15,3 +15,5 @@ sign up page
 admin dashboard using grid and flex
 ## odin-library
 display a book list and add, delete books
+## odin-tic-tac-toe
+implementation of the tic-tac-toe game
