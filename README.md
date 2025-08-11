@@ -17,3 +17,5 @@ admin dashboard using grid and flex
 display a book list and add, delete books
 ## odin-tic-tac-toe
 implementation of the tic-tac-toe game
+## odin-webpack-practice
+learning and summary of the bundler: webpack
