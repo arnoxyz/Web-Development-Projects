@@ -1,9 +1,30 @@
+import testImage from "./test.png";
+
 export const createItems = () => {
     const menuItems = [
-      { name: "Pizza", desc: "Our famous pizza" },
-      { name: "Toast", desc: "Our famous toast" },
-      { name: "Smash Burger", desc: "Our famous smash burger" }
+        {
+            name: "Margherita Pizza",
+            desc: "Classic pizza topped with fresh mozzarella, tomatoes, and basil."
+        },
+        {
+            name: "Avocado Toast",
+            desc: "Sourdough toast with smashed avocado, cherry tomatoes, and a hint of lime."
+        },
+        {
+            name: "Smash Burger",
+            desc: "Juicy beef patty with cheddar, caramelized onions, and our secret sauce."
+        },
+        {
+            name: "Caesar Salad",
+            desc: "Crisp romaine lettuce, parmesan shavings, croutons, and Caesar dressing."
+        },
+        {
+            name: "Chocolate Lava Cake",
+            desc: "Rich chocolate cake with a warm molten center and a scoop of vanilla."
+        }
     ];
+
+
 
     const htmlContent = `
     <header>
@@ -18,7 +39,6 @@ export const createItems = () => {
           <div class="menu-item">
             <h2>${item.name}</h2>
             <div class="item-description">${item.desc}</div>
-            <div class="item-picture"></div>
           </div>
         `).join('')}
       </div>
