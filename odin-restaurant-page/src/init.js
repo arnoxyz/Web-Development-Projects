@@ -29,6 +29,7 @@ export const createItems = () => {
     const htmlContent = `
     <header>
       <button>Home</button>
+      <button>Menu</button>
       <button>About</button>
     </header>
 
@@ -45,5 +46,8 @@ export const createItems = () => {
     </div>
     `;
 
-    document.body.innerHTML = htmlContent;
+
+    const contentDiv = document.querySelector('#content');
+    contentDiv.innerHTML = htmlContent;
+    //document.body.innerHTML = htmlContent;
 }
