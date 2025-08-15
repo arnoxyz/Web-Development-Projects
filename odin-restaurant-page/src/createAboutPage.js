@@ -1,6 +1,6 @@
 import testImage from "./test.png";
 
-export const createItems = () => {
+export const createAboutPage = () => {
     const menuItems = [
         {
             name: "Margherita Pizza",
@@ -27,11 +27,6 @@ export const createItems = () => {
 
 
     const htmlContent = `
-    <header>
-      <button>Home</button>
-      <button>Menu</button>
-      <button>About</button>
-    </header>
 
     <div id="content">
       <h1>Our Menu</h1>
@@ -49,5 +44,4 @@ export const createItems = () => {
 
     const contentDiv = document.querySelector('#content');
     contentDiv.innerHTML = htmlContent;
-    //document.body.innerHTML = htmlContent;
 }
