@@ -1,3 +1,8 @@
+h1 {
+ font-size: 2rem;
+}
+
+
 /* HEADER */
 header {
     padding: 10px 20px;
@@ -32,3 +37,10 @@ body {
     align-items: center;
 }
 
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+}

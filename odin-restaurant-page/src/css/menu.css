@@ -1,14 +1,4 @@
 /* MENU */
-#content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1 {
-    color: #333;
-}
 
 #menu {
     display: flex;
@@ -20,11 +10,9 @@ h1 {
 }
 
 .menu-item {
-    background: white;
     width: 100%;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
     display: flex;
     flex-direction: column;

@@ -1,13 +1,8 @@
 export const createHomePage = () => {
 
     const htmlContent = `
-        <div class="grid">
-            <section aria-labelledby="hours-title">
-                <p><strong>The Brickhouse has the best pizza in town!</strong>
-                The warm atmosphere and friendly service make you feel like
-                you’ve stepped into an Italian kitchen,
-                where every bite is fresh from the oven.
-            </section>
+           <div id="content">
+            <h1>The Brickhouse</h1>
 
             <section aria-labelledby="hours-title">
                 <h2 id="hours-title">Hours</h2>
