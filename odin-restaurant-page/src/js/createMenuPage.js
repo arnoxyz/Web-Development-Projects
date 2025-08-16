@@ -1,5 +1,3 @@
-import testImage from "./test.png";
-
 export const createMenuPage = () => {
     const menuItems = [
         {

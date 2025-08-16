@@ -1,6 +1,4 @@
-import testImage from "./test.png";
-
-export const createHomePage = () => {
+export const createAboutPage = () => {
     const menuItems = [
         {
             name: "Margherita Pizza",
@@ -27,6 +25,7 @@ export const createHomePage = () => {
 
 
     const htmlContent = `
+
     <div id="content">
       <h1>Our Menu</h1>
       <div id="menu">

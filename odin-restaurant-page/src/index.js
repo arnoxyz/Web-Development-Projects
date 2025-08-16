@@ -1,7 +1,9 @@
-import "./styles.css";
-import { createHomePage} from "./createHomePage.js";
-import { createMenuPage } from "./createMenuPage.js";
-import { createAboutPage } from "./createAboutPage.js";
+import "./css/styles.css";
+import "./css/menu.css";
+
+import { createHomePage} from "./js/createHomePage.js";
+import { createMenuPage } from "./js/createMenuPage.js";
+import { createAboutPage } from "./js/createAboutPage.js";
 
 function createButtonEvents() {
     // Select all buttons inside header
