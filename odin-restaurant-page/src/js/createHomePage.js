@@ -1,43 +1,37 @@
 export const createHomePage = () => {
-    const menuItems = [
-        {
-            name: "Margherita Pizza",
-            desc: "Classic pizza topped with fresh mozzarella, tomatoes, and basil."
-        },
-        {
-            name: "Avocado Toast",
-            desc: "Sourdough toast with smashed avocado, cherry tomatoes, and a hint of lime."
-        },
-        {
-            name: "Smash Burger",
-            desc: "Juicy beef patty with cheddar, caramelized onions, and our secret sauce."
-        },
-        {
-            name: "Caesar Salad",
-            desc: "Crisp romaine lettuce, parmesan shavings, croutons, and Caesar dressing."
-        },
-        {
-            name: "Chocolate Lava Cake",
-            desc: "Rich chocolate cake with a warm molten center and a scoop of vanilla."
-        }
-    ];
-
-
 
     const htmlContent = `
-    <div id="content">
-      <h1>Our Menu</h1>
-      <div id="menu">
-        ${menuItems.map(item => `
-          <div class="menu-item">
-            <h2>${item.name}</h2>
-            <div class="item-description">${item.desc}</div>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-    `;
+        <div class="grid">
+            <section aria-labelledby="hours-title">
+                <p><strong>The Brickhouse has the best pizza in town!</strong>
+                The warm atmosphere and friendly service make you feel like
+                you’ve stepped into an Italian kitchen,
+                where every bite is fresh from the oven.
+            </section>
 
+            <section aria-labelledby="hours-title">
+                <h2 id="hours-title">Hours</h2>
+                <dl class="hours">
+                    <dt>Sunday</dt><dd>11am – 9pm</dd>
+                    <dt>Monday</dt><dd>11am – 9pm</dd>
+                    <dt>Tuesday</dt><dd>11am – 9pm</dd>
+                    <dt>Wednesday</dt><dd>11am – 9pm</dd>
+                    <dt>Thursday</dt><dd>11am – 10pm</dd>
+                    <dt>Friday</dt><dd>11am – 11pm</dd>
+                    <dt>Saturday</dt><dd>11am – 11pm</dd>
+                </dl>
+            </section>
+
+            <section aria-labelledby="location-title">
+                <h2 id="location-title">Location</h2>
+                <address>
+                    <span class="pin">📍</span>
+                    123 Main Street<br />
+                    Forestville, Maine
+                </address>
+            </section>
+        </div>
+    `;
 
     const contentDiv = document.querySelector('#content');
     contentDiv.innerHTML = htmlContent;
