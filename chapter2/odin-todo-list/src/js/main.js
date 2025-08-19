@@ -1,9 +1,11 @@
 import "../css/styles.css";
-//import { createNewTODO } from "./todo.js";
+
+//TODO:
+//import { createNewTODO, deleteTODO, renderTODO } from "./todo.js";
 
 function init(){
     const content = `
-        <h1>My TODOS:</h1>
+        <h1>TODOS</h1>
         <div id="create-item">
             <input type="text"></input>
             <button>Create</button>
