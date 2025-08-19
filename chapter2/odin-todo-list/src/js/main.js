@@ -30,8 +30,27 @@ function init(){
     document.body.innerHTML = content;
 }
 
+function addDoneButton() {
+    document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll("#items .item button");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", (e) => {
+                const item = e.target.closest(".item");
+                const text = item.querySelector("p");
+                text.classList.toggle("completed");
+                e.target.disabled = true;
+                e.target.textContent = "✓";
+            });
+        });
+    });
+}
+
+
 function main(){
     init();
+    addDoneButton();
+
 
 }
 
