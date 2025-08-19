@@ -40,12 +40,22 @@ function createNewTODO() {
     const createBtn = document.querySelector('#create-item button');
     const inputField = document.querySelector('#create-item input');
 
-    createBtn.addEventListener('click', () => {
+    function addTodo() {
         const text = inputField.value.trim();
         if (!text) return;
         createItem(text);
         inputField.value = '';
         saveCurrentItems();
+    }
+
+    // Click on Create button
+    createBtn.addEventListener('click', addTodo);
+
+    // Press Enter in input field
+    inputField.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            addTodo();
+        }
     });
 }
 
