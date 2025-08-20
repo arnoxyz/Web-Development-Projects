@@ -3,7 +3,7 @@ Learning web-development by building projects. I use the website [odin-project](
 to get ideas for projects and also to learn/review web development skills.
 
 ## Chapter 1
-### [recipes](./chapter1/)
+### [recipes](./chapter1/1-recipes/README.md)
 website with subsites for recipes
 ### landing-page
 website template using css-flexbox
