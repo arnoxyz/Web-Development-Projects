@@ -5,7 +5,7 @@ to get ideas for projects and also to learn/review web development skills.
 ## Chapter 1
 ### [recipes](./chapter1/1-recipes/README.md)
 website with subsites for recipes
-### landing-page
+### [landing-page](./chapter1/2-landing-page/README.md)
 website template using css-flexbox
 ### rock-paper-scissors
 website with a console game
