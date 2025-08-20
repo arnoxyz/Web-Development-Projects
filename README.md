@@ -7,7 +7,7 @@ to get ideas for projects and also to learn/review web development skills.
 website with subsites for recipes
 ### [landing-page](./chapter1/2-landing-page/README.md)
 website template using css-flexbox
-### rock-paper-scissors
+### [rock-paper-scissor](./chapter1/3-rock-paper-scissor/README.md)
 website with a console game
 ### paint
 implementation of etch-a-sketch version
