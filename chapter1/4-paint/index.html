@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+    <title>Paint</title>
+</head>
+
+<body>
+    <h1>Paint<h1>
+    <div id="game-board"></div>
+
+    <h2>Gen New Board</h2>
+    <div id="game-config">
+        <div>
+            <label for ="pen-color">Pen-Color</label>
+            <input id="pen-color" value="#ffffff" type="color"></input>
+        </div>
+        <div>
+            <label for ="board-color">Board-Color</label>
+            <input id="board-color" value="#000000" type="color"></input>
+        </div>
+        <div>
+            <label for ="input-board-size">Board-Size</label>
+            <input id="input-board-size" type="number" value="16" min="5" max="40" step="5" oninput="this.value = this.value.replace(/[^0-9]/g, '');"></input>
+        </div>
+        <div>
+            <button id ="btn-gen-board">Gen Board</button>
+        </div>
+    </div>
+    <div id="mode-select">
+        <div>
+            <label for="random-color">Random Color Mode</label>
+            <input type="checkbox" id="random-color" name="mode" value="randomColor">
+        </div>
+        <div>
+            <label for="opacity">Opacity Mode</label>
+            <input type="checkbox" id="opacity" name="mode" value="opacity">
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
