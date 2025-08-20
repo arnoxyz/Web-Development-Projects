@@ -1,0 +1,33 @@
+#announces {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    margin-right: 25px;
+}
+
+.announc-element {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.announc-element:last-child {
+  border-bottom: none;
+}
+
+.announc-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.announc-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
