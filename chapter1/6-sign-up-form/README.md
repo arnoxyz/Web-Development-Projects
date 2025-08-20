@@ -2,4 +2,4 @@
 # Sign Up Page
 
 ## Final Design
-![sign-up-page](./sign-final.png)
+![sign-up-page](./examples/sign-final.png)
