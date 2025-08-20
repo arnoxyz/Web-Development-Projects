@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+    <title>Sign-Up-Page</title>
+</head>
+
+<body>
+    <div id="picture-placeholder"></div>
+
+    <main>
+        <div id="info-area">
+            <div>
+                This is not a real online service! You know you
+                need something like this in your life to help you realize
+                your deepest dreams.
+            </div>
+            <div>
+                Sign up <i>now</i> to get started
+            </div>
+            <div>
+                You <i>know</i> you want to.
+            </div>
+        </div>
+
+        <div id="form-area">
+            <div>Let's do this!</div>
+            <div id="sign-up-form">
+                <form action="/submit" method="post">
+                    <div class="sign-up-row">
+                        <div class="sign-up-element">
+                          <label for="first-name">FIRST NAME</label>
+                          <input type="text" id="first-name" name="name" required>
+                        </div>
+                        <div class="sign-up-element">
+                          <label for="last-name">LAST NAME</label>
+                          <input type="text" id="last-name" name="name" required>
+                        </div>
+                    </div>
+                    <div class="sign-up-row">
+                        <div class="sign-up-element">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="sign-up-element">
+                            <label for="phone">PHONE NUMBER</label><br>
+                            <input type="tel" id="phone" name="phone" required placeholder="e.g., 123-456-7890" pattern="[0-9\-]+" />
+                        </div>
+                    </div>
+                    <div class="sign-up-row">
+                        <div class="sign-up-element">
+                          <label for="password">PASSWORD</label><br>
+                          <input type="password" id="password" name="password" required minlength="6" />
+                        </div>
+                        <div class="sign-up-element">
+                          <label for="confirm">CONFIRM PASSWORD</label><br>
+                          <input type="password" id="confirm" name="confirm" required minlength="6" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+         </div>
+        <div id="call-to-action-area">
+            <button>Create Account</button>
+            <div>
+                Already have an account? <a href="#">Log in</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

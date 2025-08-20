@@ -1,0 +1,129 @@
+body {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+#picture-placeholder {
+    width: 200px;
+    height: 100vh;
+    background-color: darkgreen;
+    flex: 1;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+#info-area,
+#form-area,
+#call-to-action-area {
+    padding-left: 35px;
+}
+
+/* INFO-AREA */
+#info-area {
+    width: 550px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+#info-area > :nth-child(1) {
+    width: 500px;
+    font-size: 20px;
+}
+
+#info-area > :nth-child(2) {
+    padding-bottom: 15px;
+}
+
+#info-area > :nth-child(3) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* FORM-AREA */
+#form-area {
+    width: 550px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#form-area > :nth-child(1) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#sign-up-form {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 430px;
+}
+
+.sign-up-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-up-element {
+    font-size: 12px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    width: 175px;
+    gap: 4px;
+}
+.sign-up-element input{
+    width: 160px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+/* CTA-AREA */
+#call-to-action-area {
+
+}
+#call-to-action-area div a {
+  color: darkgreen;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+#call-to-action-area button {
+  background-color: darkgreen;
+  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+#call-to-action-area button:hover {
+  background-color: green;
+}
+
+#call-to-action-area button:active {
+  background-color: #124f23;
+}
