@@ -1,25 +1,31 @@
-# Odin-Projects
+# Web-Development-Projects
+Learning web-development by building projects. I use the website [odin-project](https://www.theodinproject.com/dashboard)
+to get ideas for projects and also to learn/review web development skills.
+
 ## Chapter 1
-### odin-recipes
+### recipes
 website with subsites for recipes
-### odin-landing-page
+### landing-page
 website template using css-flexbox
-### odin-rock-paper-scissors
+### rock-paper-scissors
 website with a console game
-### odin-etch-a-sketch
+### paint
 implementation of etch-a-sketch version
-### odin-calculator
+### calculator
 simple calculator
-### odin-sign-up-form
+### sign-up-form
 sign up page
-### odin-admin-dashboard
+### admin-dashboard
 admin dashboard using grid and flex
-### odin-library
+### library
 display a book list and add, delete books
-### odin-tic-tac-toe
+### tic-tac-toe
 implementation of the tic-tac-toe game
-### odin-webpack-practice
-learning and summary of the bundler: webpack
-### odin-restaurant-page
-restaurant page using webpack
+
 ## Chapter 2
+### intro to webpack
+learning the bundler webpack
+### restaurant-page
+restaurant page using webpack
+### todo-list
+todo-list using local storage and webpack
