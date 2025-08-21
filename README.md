@@ -23,9 +23,9 @@ display a book list and add, delete books
 implementation of the tic-tac-toe game
 
 ## Chapter 2
-### intro to webpack
+### [intro-to-webpack](./chapter2/9-webpack-intro/)
 learning the bundler webpack
-### restaurant-page
+### [restaurant-page](./chapter2/10-restaurant/)
 restaurant page using webpack
-### todo-list
+### [todo-list](./chapter2/11-todo-list/)
 todo-list using local storage and webpack
