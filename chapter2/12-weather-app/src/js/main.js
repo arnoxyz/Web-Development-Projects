@@ -3,9 +3,14 @@ import "../css/styles.css";
 function init() {
     document.body.innerHTML = `
     <div id="main">
-        <h1>Weather App</h1>
+        <div id="search">
+            <h1>Weather App</h1>
             <input id="search-input" name="q" type="search" placeholder="Search for a location..." required>
             <button id="search-btn" type="button">Search</button>
+        </div>
+
+        <div id="weather-display">
+        </div>
     </div>
     `;
 }
@@ -23,8 +28,23 @@ function onClick(event) {
 
     fetch(url, {mode: 'cors'})
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => renderData(data))
+    //console.log(data)
     .catch(err => console.error(err));
+}
+
+function renderData(data) {
+    const container = document.getElementById('weather-display');
+    container.innerHTML = `
+        <h2>Weather for ${data.address}</h2>
+        <p>${data.description}</p>
+        <h3>Current Conditions:</h3>
+        <ul>
+          <li>Temperature: ${data.currentConditions.temp}°C</li>
+          <li>Humidity: ${data.currentConditions.humidity}%</li>
+          <li>Conditions: ${data.currentConditions.conditions}</li>
+        </ul>
+    `;
 }
 
 function main() {
