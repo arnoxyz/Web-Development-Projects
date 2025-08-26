@@ -18,13 +18,16 @@ function addEvent() {
 function onClick(event) {
     event.preventDefault(); // prevent actual form submission
     const query = document.getElementById('search-input').value.trim();
-    alert("You searched for: " + query);
-    //TODO: Search for Data with API REQUEST
-    //TODO: Display Data
+    const apiKey = "QHUHRGANJWDZQGVYVX9QZNH3U";
+    let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${query}/?key=${apiKey}`
+
+    fetch(url, {mode: 'cors'})
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
 }
 
 function main() {
-    console.log("Hello World!");
     init();
     addEvent();
 }
