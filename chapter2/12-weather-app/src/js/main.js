@@ -35,7 +35,7 @@ function onClick(event) {
 function renderData(data) {
     const container = document.getElementById('weather-display');
     container.innerHTML = `
-        <h2>Weather for ${data.address}</h2>
+        <h2>Weather in ${data.address}</h2>
         <p>${data.description}</p>
         <h3>Current Conditions:</h3>
         <ul>
