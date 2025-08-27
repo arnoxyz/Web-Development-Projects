@@ -24,12 +24,11 @@ function onClick(event) {
     event.preventDefault(); // prevent actual form submission
     const query = document.getElementById('search-input').value.trim();
     const apiKey = "QHUHRGANJWDZQGVYVX9QZNH3U";
-    let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${query}/?key=${apiKey}`
+    let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${query}?unitGroup=metric&key=${apiKey}&contentType=json`
 
     fetch(url, {mode: 'cors'})
     .then(res => res.json())
     .then(data => renderData(data))
-    //console.log(data)
     .catch(err => console.error(err));
 }
 
