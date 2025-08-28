@@ -29,3 +29,5 @@ learning the bundler webpack
 restaurant page using webpack
 ### [todo-list](./chapter2/11-todo-list/)
 todo-list using local storage and webpack
+### [weather-app](./chapter2/12-weather-app/)
+search and display weath data using an api
