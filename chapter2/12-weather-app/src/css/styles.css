@@ -74,8 +74,8 @@ h1 {
 /* Weather */
 #weather-card {
     max-width: 320px;
+    width: 300px;
     margin: 40px auto;
-    padding: 24px;
     background-color: #f3f8ff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -87,33 +87,12 @@ h1 {
 #weather-card h2 {
     margin-bottom: 8px;
     font-size: 1.6rem;
-    color: #0073e6;
+    color: black;
 }
 
-#weather-card p {
-    margin-bottom: 16px;
-    font-size: 1rem;
-    color: #555;
-}
-
-#weather-card h3 {
-    margin-top: 20px;
-    margin-bottom: 8px;
-    font-size: 1.2rem;
-    color: #444;
-}
-
-#weather-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-#weather-card li {
-    margin: 6px 0;
-    font-size: 1rem;
-}
-
-#weather-card li strong {
-    font-weight: 600;
-    color: #000;
+#weather-icon {
+    font-size: 3rem;
+    color: #4a90e2;
+    margin: 0 auto;
+    display: block;
 }

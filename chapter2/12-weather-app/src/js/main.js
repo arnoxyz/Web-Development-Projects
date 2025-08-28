@@ -33,15 +33,22 @@ function onClick(event) {
 
 function renderData(data) {
     const container = document.getElementById('weather-card');
+    const iconCode = data.currentConditions.icon;
+    console.log(iconCode);
+
+    const iconClassMap = {
+        "clear-day": "wi-day-sunny",
+        "cloudy": "wi-cloudy",
+        "rain": "wi-rain",
+        "snow": "wi-snow",
+    };
+
+    const iconClass = iconClassMap[iconCode] || "wi-na";
+
     container.innerHTML = `
-        <h2>Weather in ${data.address}</h2>
-        <p>${data.description}</p>
-        <h3>Current Conditions:</h3>
-        <ul>
-          <li>Temperature: ${data.currentConditions.temp}°C</li>
-          <li>Humidity: ${data.currentConditions.humidity}%</li>
-          <li>Conditions: ${data.currentConditions.conditions}</li>
-        </ul>
+        <h2>${data.address}</h2>
+        <p>${data.currentConditions.temp}°C</p>
+        <i id="weather-icon" class="wi ${iconClass}"></i>
     `;
 }
 

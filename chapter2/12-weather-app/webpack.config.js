@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WebpackCDNInject = require('webpack-cdn-inject');
+
 
 module.exports = {
   mode: "development",
@@ -15,7 +17,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/template.html",
+      template: './src/template.html',
+      inject: 'head',
+    }),
+    new WebpackCDNInject({
+      head: [
+        'https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css',
+      ],
     }),
   ],
   module: {
