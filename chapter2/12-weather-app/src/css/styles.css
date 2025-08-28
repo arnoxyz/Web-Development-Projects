@@ -13,6 +13,7 @@ body {
 h1 {
     color: black;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     font-size: 1.5rem;
     text-align: center;
 }
@@ -73,26 +74,31 @@ h1 {
 
 /* Weather */
 #weather-card {
-    max-width: 320px;
-    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding: 45px;
+    width: 350px;
+    height: 50px;
     margin: 40px auto;
-    background-color: #f3f8ff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
     text-align: center;
 }
 
 #weather-card h2 {
-    margin-bottom: 8px;
+    padding: 0px;
     font-size: 1.6rem;
     color: black;
 }
 
+#weather-card p {
+    font-size: 1.5rem;
+}
+
 #weather-icon {
     font-size: 3rem;
-    color: #4a90e2;
-    margin: 0 auto;
     display: block;
 }
