@@ -25,7 +25,7 @@ h1 {
     flex-direction: column;
 }
 
-#search{
+#search {
     min-width: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -69,4 +69,51 @@ h1 {
 
 #search-btn:active {
     background-color: #004494;
+}
+
+/* Weather */
+#weather-card {
+    max-width: 320px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #f3f8ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+#weather-card h2 {
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+    color: #0073e6;
+}
+
+#weather-card p {
+    margin-bottom: 16px;
+    font-size: 1rem;
+    color: #555;
+}
+
+#weather-card h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+#weather-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+#weather-card li {
+    margin: 6px 0;
+    font-size: 1rem;
+}
+
+#weather-card li strong {
+    font-weight: 600;
+    color: #000;
 }

@@ -9,8 +9,7 @@ function init() {
             <button id="search-btn" type="button">Search</button>
         </div>
 
-        <div id="weather-display">
-        </div>
+        <div id="weather-card"></div>
     </div>
     `;
 }
@@ -26,14 +25,14 @@ function onClick(event) {
     const apiKey = "QHUHRGANJWDZQGVYVX9QZNH3U";
     let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${query}?unitGroup=metric&key=${apiKey}&contentType=json`
 
-    fetch(url, {mode: 'cors'})
-    .then(res => res.json())
-    .then(data => renderData(data))
-    .catch(err => console.error(err));
+    fetch(url, { mode: 'cors' })
+        .then(res => res.json())
+        .then(data => renderData(data))
+        .catch(err => console.error(err));
 }
 
 function renderData(data) {
-    const container = document.getElementById('weather-display');
+    const container = document.getElementById('weather-card');
     container.innerHTML = `
         <h2>Weather in ${data.address}</h2>
         <p>${data.description}</p>
