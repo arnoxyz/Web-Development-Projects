@@ -1,0 +1,18 @@
+ PASS  ./game.logic.test.js
+  tie game logic
+    ✓ tie game logic (r,r) (25 ms)
+    ✓ tie game logic (s,s) (4 ms)
+    ✓ tie game logic (p,p) (4 ms)
+  player loses game logic
+    ✓ player L (r,p) (5 ms)
+    ✓ player L (s,r) (4 ms)
+    ✓ player L (p,s) (5 ms)
+  player wins game logic
+    ✓ player W (p,r) (4 ms)
+    ✓ player W (r,s) (3 ms)
+    ✓ player W (s,p) (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        0.443 s, estimated 1 s
