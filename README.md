@@ -1,2 +1,3 @@
 # Web-Development-Projects
-## [vanilla](./vanilla/README)
+## [vanilla](./vanilla/)
+## [react](./react/)
