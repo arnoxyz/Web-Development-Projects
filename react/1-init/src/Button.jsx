@@ -13,7 +13,7 @@ const Button = ({ text = "grey" }) => {
 
     return (
         <>
-            <button style={{ backgroundColor: bgColor }} onClick={handleClick}>{cnt}</button>
+            <button style={{ backgroundColor: bgColor }} onClick={handleClick}></button>
         </>
     );
 };
