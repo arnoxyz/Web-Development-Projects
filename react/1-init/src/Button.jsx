@@ -1,13 +1,20 @@
-const Button = ({color = "blue", fontSize = 12, text = "click me", handleClick}) => {
-    const buttonStyle = { 
-        color: color, 
-        fontSize: fontSize + "px" 
-    };
+import { useState } from "react";
+
+
+const Button = ({ text = "grey" }) => {
+    const [cnt, setCnt] = useState(0);
+    const [bgColor, setBg] = useState(text);
+
+    const handleClick = () => {
+        setCnt(cnt + 1);
+        setBg(text);
+        document.body.style.backgroundColor = text;
+    }
 
     return (
-    <>
-        <button style={buttonStyle} onClick={handleClick}>{text}</button>
-    </>
+        <>
+            <button style={{ backgroundColor: bgColor }} onClick={handleClick}>{cnt}</button>
+        </>
     );
 };
 
