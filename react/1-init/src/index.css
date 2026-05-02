@@ -109,3 +109,16 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+
+#button-menu,
+#food-menu,
+#menu{
+  display: flex;
+  gap: 25px;
+}
+
+#menu{
+  flex-direction: column;
+}
+

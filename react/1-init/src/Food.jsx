@@ -1,8 +1,8 @@
-const Food = () => {
+const Food = ({name = "Apple"}) => {
+
   return (
     <>
-      <h1>Apple</h1>
-      <h1>Banana</h1>
+      <h1>{name}</h1>
     </>
   );
 };

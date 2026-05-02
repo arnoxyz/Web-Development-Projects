@@ -1,24 +1,28 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import "./App.css";
+import Greeting from "./Greeting.jsx";
+import Food from "./Food.jsx";
+import Test from "./Test.jsx";
+import Button from "./Button.jsx";
+
+
+
 
 const App = () => {
-  const [count, setCount] = useState(0);
+ 
+  const handleButtonClick = (msg) => {
+    console.log(msg);
+  };
 
   return (
     <>
-      <div>
-        <h1>Hello World!</h1>
+    <div id="menu">
+        <div id="button-menu">
+          <Button text="text1" color="blue" fontSize="25" handleClick={() => handleButtonClick("button 1 blicked!")}> </Button>
+          <Button text="text2" color="red" fontSize="35" handleClick={() => handleButtonClick("button 2 clicked!")}></Button>
+          <Button text="text3" color="orange" fontSize="45" handleClick={() => handleButtonClick("button 3 clicked!")}></Button>
+          <Button text="text4" color="green" fontSize="55" handleClick={() => handleButtonClick("button 4 clicked!")}></Button>
+        </div>
       </div>
-      <button
-        type="button"
-        className="counter"
-        onClick={() => setCount((count) => count + 1)}
-      >
-        Count is {count}
-      </button>
     </>
   );
 };
